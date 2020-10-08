@@ -60,11 +60,6 @@
 				<h2 class="subtitulo">Portfólio</h2>
 				
 				<?php include(TEMPLATEPATH . "/inc/clientes-portfolio.php"); ?>
-				
-				<div class="call">
-					<p><?php the_field('portfolio_call'); ?></p>
-					<a href="./portfolio" class="btn">Portfólio</a>
-				</div>
 			</div>
 		</section>
 
