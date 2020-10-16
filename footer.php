@@ -9,11 +9,13 @@
 
 					<div class="grid-8 footer_historia">
 						<h3>Nossa História</h3>
+						
 						<p>Quando iniciamos a Bikcraft queriamos apenas um produto que adoraríamos utilizar. Eramos apaixonados por pedalar e também por fazer as coisas com as nossas próprias mãos. Assim surgiu um sonho na garagem da nossa casa.</p>
 					</div>
 
 					<div class="grid-4 footer_contato">
 						<h3>Contato</h3>
+
 						<ul>
 							<li>- 21 9999-9999</li>
 							<li>- contato@bikcraft.com</li>
@@ -22,12 +24,9 @@
 					</div>
 
 					<div class="grid-4 footer_redes">
-						<h3>Contato</h3>
-						<ul>
-							<li><a href="http://facebook.com" target="_blank"><img src="img/redes-sociais/facebook.png" alt="Facebook Bikcraft"></a></li>
-							<li><a href="http://instagram.com" target="_blank"><img src="img/redes-sociais/instagram.png" alt="Instagram Bikcraft"></a></li>
-							<li><a href="http://twitter.com" target="_blank"><img src="img/redes-sociais/twitter.png" alt="Twitter Bikcraft"></a></li>
-						</ul>
+						<h3>Redes sociais</h3>
+
+						<?php include(TEMPLATEPATH . "/inc/redes-sociais.php"); ?>
 					</div>
 
 				</div>
