@@ -1,25 +1,33 @@
+<?php $contato = get_page_by_title('contato'); ?>
+		<style>
+			.quebra {
+				background-image: url(<?php the_field('footer_background', $contato); ?>);
+			}
+		</style>
+		
 		<div class="quebra">
 			<blockquote class="quote-externo container">
-				<p>“o verdadeiro segredo da felicidade está em ter um genuíno interesse por todos os detalhes da vida cotidiana.”</p>
-				<cite>WILLIAM MORRIS</cite>
+				<?php the_field('footer_quote', $contato); ?>
+				<cite><?php the_field('footer_author', $contato); ?></cite>
 			</blockquote>
 		</div>
 
-		<footer> <div class="footer"> <div class="container">
-
+		<footer> 
+			<div class="footer"> 
+				<div class="container">
 					<div class="grid-8 footer_historia">
 						<h3>Nossa História</h3>
-						
-						<p>Quando iniciamos a Bikcraft queriamos apenas um produto que adoraríamos utilizar. Eramos apaixonados por pedalar e também por fazer as coisas com as nossas próprias mãos. Assim surgiu um sonho na garagem da nossa casa.</p>
+
+						<?php the_field('contato_story_resume', $contato); ?>
 					</div>
 
 					<div class="grid-4 footer_contato">
 						<h3>Contato</h3>
 
 						<ul>
-							<li>- 21 9999-9999</li>
-							<li>- contato@bikcraft.com</li>
-							<li>- Botafago - RJ</li>
+							<li>- <?php the_field('contato_phone', $contato); ?></li>
+							<li>- <?php the_field('contato_mail', $contato); ?></li>
+							<li>- <?php the_field('contato_address02', $contato); ?></li>
 						</ul>
 					</div>
 
@@ -28,13 +36,12 @@
 
 						<?php include(TEMPLATEPATH . "/inc/redes-sociais.php"); ?>
 					</div>
-
 				</div>
 			</div>
 
 			<div class="copy">
 				<div class="container">
-					<p class="grid-16">Bikcraft 2015 - Alguns direitos reservados.</p>
+					<p class="grid-16"><?php bloginfo('name'); ?> <?php echo date('Y'); ?> - Alguns direitos reservados.</p>
 				</div>
 			</div>
 		</footer>
