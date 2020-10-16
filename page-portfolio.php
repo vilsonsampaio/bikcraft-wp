@@ -11,7 +11,21 @@
 
 		<section class="container animar-interno">
 			<ul class="rslides">
+
+				<?php if(have_rows('portfolio_testimonials')): while(have_rows('portfolio_testimonials')) : the_row(); ?>
+
+
 				<li>
+					<blockquote class="quote_clientes">
+						<?php the_sub_field('portfolio_quote'); ?>
+						<cite><?php the_sub_field('portfolio_author'); ?></cite>
+					</blockquote>
+				</li>
+
+
+				<?php endwhile; else : endif; ?>
+
+				<!-- <li>
 					<blockquote class="quote_clientes">
 						<p>“Pedalar sempre foi a minha paixão, o que o pessoal da Bikcraft fez foi intensificar o meu amor por esta atividade. Recomendo à todos que amo.”</p>
 						<cite>Barbara Moss</cite>
@@ -30,7 +44,7 @@
 						<p>“Aqueles que ainda não possuem uma Bikcraft, não sabem o que estão perdendo. A precisão é absurda e a velocidade transcendental. Nunca vida nada igual.”</p>
 						<cite>Bernardo</cite>
 					</blockquote>
-				</li>
+				</li> -->
 			</ul>
 		</section>
 
