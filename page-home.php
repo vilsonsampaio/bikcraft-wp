@@ -5,7 +5,25 @@
 <?php get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	
+
+	<?php 
+		$image_id = get_field('background_home');
+
+		$image_large = wp_get_attachment_image_src($image_id, 'large');
+		$image_medium = wp_get_attachment_image_src($image_id, 'medium');
+	?>
+		<style>
+			.introducao {
+				background-image: url(<?php echo $image_large[0]; ?>);
+			}
+
+			@media only screen and (max-width: 767px) {
+				.introducao {
+					background-image: url(<?php echo $image_medium[0]; ?>);
+				}	
+			}
+		</style>
+		
 		<section class="introducao">
 			<div class="container">
 				<h1><?php the_field('intro_title'); ?></h1>

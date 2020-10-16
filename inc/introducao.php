@@ -1,8 +1,8 @@
 <style>
 	.introducao-interna {
-	background: url(<?php the_field('background_intro'); ?>) no-repeat center;
-	background-size: cover;
-}
+		background: url(<?php the_field('background_intro'); ?>) no-repeat center;
+		background-size: cover;
+	}
 </style>
 
 <section class="introducao-interna">
