@@ -1,4 +1,43 @@
 <?php
+	// Função para registrar os scripts e CSS
+	function bikcraft_scripts() {
+		// Desregistra o jQuery padrão do Wordpress
+		wp_deregister_script('jquery');
+
+		
+		// Registra o jQuery Novo
+		wp_register_script( 'jquery', get_template_directory_uri() . '/js/libs/jquery-1.11.2.min.js', array(), '1.11.2', true );
+
+		// Registra o Script de Plugins, com dependência do jquery, sem especificar versão e no footer do site
+		wp_register_script( 'plugins-script', get_template_directory_uri() . '/js/plugins.js', array( 'jquery' ), false, true );
+
+		// Registra o Script Principal, com dependência do jquery e plugins, sem especificar versão e no footer do site
+		wp_register_script( 'main-script', get_template_directory_uri() . '/js/main.js', array( 'jquery', 'plugins-script' ), false, true );
+
+		// Coloca script no site
+		wp_enqueue_script( 'main-script' );
+
+		// Registra o Modernizer
+		wp_register_script( 'mordenizr', get_template_directory_uri() . '/js/libs/modernizr.custom.45655.js', array(), '45655', false );
+
+		// Colca mordenizr no site
+		wp_enqueue_script( 'mordenizr' );
+	}
+
+	// Executa função assim que adiciona os scripts
+	add_action( 'wp_enqueue_scripts', 'bikcraft_scripts' );
+
+	// Função para registrar os styles CSS
+	function bikcraft_styles() {
+		// Registrando o styles principal
+		wp_register_style( 'main_style', get_template_directory_uri() . '/style.css', array(), false, false );
+
+		// Colocando o style no site
+		wp_enqueue_style( 'main_style' );
+	}
+
+	// Executa função assim que adiciona os styles
+	add_action( 'wp_enqueue_scripts', 'bikcraft_styles' );
 
 	// Funções para Limpar o Header
 	remove_action('wp_head', 'rsd_link');

@@ -15,9 +15,6 @@
 
 		<link rel="shortcut icon" href="favicon.ico">
 
-		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
-		<script src="js/libs/modernizr.custom.45655.js"></script>
-
 		<!-- INÍCIO WORDPRESS HEAD -->
 		<?php wp_head(); ?>
 		<!-- FINAL WORDPRESS HEAD -->
