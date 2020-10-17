@@ -155,7 +155,7 @@ img {
   color: #fff;
 }
 
-.header_menu ul li a.menu_ativo {
+.header_menu ul li.current-menu-item a {
   color: #fff;
 }
 
@@ -568,7 +568,7 @@ img {
     border-color: #fff;
   }
 
-  .header_menu ul li a.menu_ativo {
+  .header_menu ul li.current-menu-item a {
     border-color: #fff;
   }
 

@@ -60,4 +60,15 @@
 	// Função acima é executa quando o WordPress iniciar.
 	add_action('init', 'custom_post_type_produtos');
 
+	// Habilitando menus.
+	add_theme_support('menus');
+
+	// Registranao o menu
+	function register_my_menu_principal() {
+		register_nav_menu('menu-principal',__( 'Menu Principal' ));
+	}
+
+	// Executando a função acima assim que o WordPress iniciar.
+	add_action( 'init', 'register_my_menu_principal' );
+
 ?>
