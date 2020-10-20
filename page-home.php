@@ -32,7 +32,7 @@
 					<p><?php the_field('intro_quote'); ?></p>
 					<cite><?php the_field('intro_author'); ?></cite>
 				</blockquote>
-				<a href="./produtos" class="btn">Orçamento</a>
+				<a href="<?php bloginfo('url'); ?>/produtos/#orcamento" class="btn">Orçamento</a>
 			</div>
 		</section>
 		
@@ -69,7 +69,7 @@
 
 			<div class="call">
 				<p><?php the_field('produtos_call'); ?></p>
-				<a href="./produtos" class="btn btn-preto">Produtos</a>
+				<a href="<?php bloginfo('url'); ?>/produtos" class="btn btn-preto">Produtos</a>
 			</div>
 
 		</section>
