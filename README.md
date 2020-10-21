@@ -1,7 +1,5 @@
 <h1 align="center">
-    <img alt="Bikcraft" title="Bikcraft" src="./.github/bikcraft.svg" width="100px" />
-    +
-    <img alt="WordPress" title="WordPress" src="./.github/wordpress.svg" width="100px" />
+    <img alt="Bikcraft" title="Bikcraft" src="./.github/bikcraft + wp.svg" height="120px" />
 </h1>
 
 <p align="center">
