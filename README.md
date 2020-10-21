@@ -34,6 +34,8 @@
 
 A Bikcraft é uma empresa fictícia que trabalha com a personalização de bicicletas, cujo objetivo era o de aumentar seu faturamento por meio de um website, divulgando seus produtos para novos clientes.
 
+Com adição de um CMS (Content Manager System - Sistema de Gerenciamento de Conteúdo), que nesse caso é o WordPress, agora o cliente pode alterar vários textos, links, páginas e posts do site, sem precisar entrar em contato com o código.
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
